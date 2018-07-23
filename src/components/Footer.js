@@ -16,10 +16,10 @@ const Footer = () => (
     
       Visit&#8201;
       <Popup
-        trigger={<a href='https://github.com/jvuor/t5.1' target='parent'>Github</a>}
+        trigger={<a href='https://github.com/jvuor/blog-frontend' target='parent'>Github</a>}
         hoverable>
-        front end: <a href='https://github.com/jvuor/t5.1' target='parent'> github.com/jvuor/t5.1 </a><br />
-        back end: <a href='https://github.com/jvuor/t5.1' target='parent'> github.com/jvuor/t4.1 </a>
+        front end: <a href='https://github.com/jvuor/blog-frontend' target='parent'> github.com/jvuor/blog-frontend </a><br />
+        back end: <a href='https://github.com/jvuor/blog-backend' target='parent'> github.com/jvuor/blog-backend </a>
       </Popup>&#8201;
       for source.
     </p>

@@ -1,9 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Container, Dimmer, Loader } from 'semantic-ui-react'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { Container, Dimmer, Loader, Grid } from 'semantic-ui-react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import SideMenu from './components/SideMenu'
 import BlogList from './components/BlogList'
+import BlogView from './components/BlogView'
 import initializeLogin from './config/loginInitialization'
 import { actionBlogInit } from './actions/blogActions'
 import { actionUsersInit } from './actions/userActions'
@@ -30,14 +33,26 @@ class App extends React.Component {
       )
     } else {
       return (
-        <div>
-          <Header />
-          <Container style={containerStyle}>
-            
-            <BlogList />
-            <Footer />
-          </Container>
-        </div>
+        <Router>
+          <div>
+            <Header />
+            <Container style={containerStyle}>
+              <Grid>
+                <Grid.Column mobile={16} tablet={11} computer={12}>
+                  <Switch>
+                    <Route exact path='/' render={() => <BlogList />} />
+                    <Route path='/:id/:title' render={({match}) => <BlogView blogId={match.params.id} />} />
+                    <Redirect to='/' />
+                  </Switch>
+                  <Footer />
+                </Grid.Column>
+                <Grid.Column tablet={5} computer={4} only='tablet computer'>
+                  <SideMenu />
+                </Grid.Column>
+              </Grid>
+            </Container>
+          </div>
+        </Router>
       )
     }
   }

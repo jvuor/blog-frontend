@@ -4,12 +4,14 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'main.js',
+    publicPath: '/'
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
-    port: 3000
+    port: 3000,
+    historyApiFallback: true
   },
   devtool: 'source-map',
   module: {

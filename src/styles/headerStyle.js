@@ -1,5 +1,5 @@
 const headerStyle = {
-  backgroundImage: 'url(banner.jpg)',
+  backgroundImage: 'url(/banner.jpg)',
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   height: 130,
