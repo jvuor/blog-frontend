@@ -3,12 +3,10 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import userReducer from '../reducers/userReducer'
 import blogReducer from '../reducers/blogReducer'
-import loginReducer from '../reducers/loginReducer'
 
 const reducer = combineReducers({
   users: userReducer,
-  blogs: blogReducer,
-  login: loginReducer
+  blogs: blogReducer
 })
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)))

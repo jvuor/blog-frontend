@@ -7,19 +7,14 @@ import Footer from './components/Footer'
 import SideMenu from './components/SideMenu'
 import BlogList from './components/BlogList'
 import BlogView from './components/BlogView'
-import initializeLogin from './config/loginInitialization'
 import { actionBlogInit } from './actions/blogActions'
 import { actionUsersInit } from './actions/userActions'
-import { actionUserFromStorage } from './actions/loginActions'
 import containerStyle from './styles/containerStyle'
 
 class App extends React.Component {
   componentDidMount = async () => {
     await this.props.actionBlogInit()
     await this.props.actionUsersInit()
-
-    const user = initializeLogin()
-    if (user) { this.props.actionUserFromStorage(user) }
 
   }
 
@@ -70,4 +65,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { actionUsersInit, actionBlogInit, actionUserFromStorage })(App)
+export default connect(mapStateToProps, { actionUsersInit, actionBlogInit })(App)
