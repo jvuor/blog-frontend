@@ -5,6 +5,14 @@ import { Icon, Segment, Header } from 'semantic-ui-react'
 import Moment from 'moment'
 
 class BlogView extends React.Component {
+  componentDidMount () {
+    document.title = `${this.props.blogs.find(blog => blog.id === this.props.blogId).title} - Jussin Blogi`
+  }
+
+  componentWillUnmount () {
+    document.title = 'Jussin Blogi'
+  }
+
   render () {
     const blog = this.props.blogs.find(m => m.id === this.props.blogId)
     return (

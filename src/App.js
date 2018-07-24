@@ -49,6 +49,11 @@ class App extends React.Component {
                 <Grid.Column tablet={5} computer={4} only='tablet computer'>
                   <SideMenu />
                 </Grid.Column>
+                <Grid.Row only='mobile'>
+                  <Grid.Column>
+                    <SideMenu />
+                  </Grid.Column>
+                </Grid.Row>
               </Grid>
             </Container>
           </div>
