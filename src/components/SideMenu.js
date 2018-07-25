@@ -2,13 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Menu, Header } from 'semantic-ui-react'
+import titleLink from '../utils/titleLink'
 
 class SideMenu extends React.Component {
 
   stickyMenuItem = (blog) =>
     <Menu.Item
       as={Link}
-      to={`/${blog.id}/${blog.title}.split(' ').join('-')`}
+      to={titleLink(blog.title, blog.id)}
       key={`${blog.title}-sm`}
       name={`${blog.title}-sm`}
       content={blog.title}
@@ -18,7 +19,7 @@ class SideMenu extends React.Component {
   recentMenuItem = (blog) =>
     <Menu.Item
       as={Link}
-      to={`/${blog.id}/${blog.title.split(' ').join('-')}`}
+      to={titleLink(blog.title, blog.id)}
       key={`${blog.title}-rm`}
       name={`${blog.title}-rm`}
       content={blog.title}
@@ -40,10 +41,10 @@ class SideMenu extends React.Component {
           <Menu.Item>
             <Menu.Header>Important posts</Menu.Header>
             <Menu.Menu>
-              {stickiedPosts.map(blog => this.stickyMenuItem(blog))}
+              {stickiedPosts.map(blog => this.recentMenuItem(blog))}
             </Menu.Menu>
           </Menu.Item>:
-          null}
+          null }
         <Menu.Item>
           <Menu.Header>Recent posts</Menu.Header>
         </Menu.Item>

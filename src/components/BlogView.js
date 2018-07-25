@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Icon, Segment, Header } from 'semantic-ui-react'
 import Moment from 'moment'
+import ReactMarkdown from 'react-markdown'
 
 class BlogView extends React.Component {
   componentDidMount () {
@@ -26,7 +27,7 @@ class BlogView extends React.Component {
             {blog.title}
           </Header.Content>
         </Header>
-        <p>{blog.content}</p>
+        <ReactMarkdown source={blog.content} />
         <Segment compact>
           <Icon name='pencil' />
           Written by {blog.user.name} {Moment(blog.created).fromNow()}

@@ -3,22 +3,9 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Item, Icon } from 'semantic-ui-react'
 import Moment from 'moment'
-
-const truncateContent = (content) => {
-  try {
-    if (content.length > 200) {
-      return content.split(' ', 30).concat('(...)').join(' ')
-    } else {
-      return content
-    }
-  } catch (e) {
-    return content
-  }
-}
-
-const titleLink = (title, id) => {
-  return `/${id}/${title.split(' ').join('-')}`
-}
+import stripMarkdown from '../utils/stripMarkdown'
+import titleLink from '../utils/titleLink'
+import truncateContent from '../utils/truncateContent'
 
 class BlogList extends React.Component {
   render () {
@@ -32,7 +19,7 @@ class BlogList extends React.Component {
                 <Item.Header>{blog.title}</Item.Header>
               </Link>
               <Item.Description>
-                {truncateContent(blog.content)}
+                {stripMarkdown(truncateContent(blog.content))}
               </Item.Description>
               <Item.Extra>
                 Written by {blog.user.name} {Moment(blog.created).fromNow()}
