@@ -1,6 +1,6 @@
 const stripMarkdown = (content) => {
-  const re = /[a-zA-Z]+/g
-  return content.match(re).join(' ')
+  const re = /[[\]@#$%^&*_]/g
+  return content.replace(re, '')
 }
 
 export default stripMarkdown
