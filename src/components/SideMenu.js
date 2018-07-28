@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 import { Menu, Header } from 'semantic-ui-react'
 import titleLink from '../utils/titleLink'
 
-class SideMenu extends React.Component {
-
+export class SideMenu extends React.Component {
   stickyMenuItem = (blog) =>
     <Menu.Item
       as={Link}

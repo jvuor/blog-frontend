@@ -5,7 +5,7 @@ import { Icon, Segment, Header } from 'semantic-ui-react'
 import Moment from 'moment'
 import ReactMarkdown from 'react-markdown'
 
-class BlogView extends React.Component {
+export class BlogView extends React.Component {
   componentDidMount () {
     document.title = `${this.props.blogs.find(blog => blog.id === this.props.blogId).title} - Jussin Blogi`
   }

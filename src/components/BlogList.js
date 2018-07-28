@@ -7,7 +7,7 @@ import stripMarkdown from '../utils/stripMarkdown'
 import titleLink from '../utils/titleLink'
 import truncateContent from '../utils/truncateContent'
 
-class BlogList extends React.Component {
+export class BlogList extends React.Component {
   render () {
     return (
       <Item.Group>
