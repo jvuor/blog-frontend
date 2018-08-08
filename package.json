@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --mode=production",
     "start": "webpack-dev-server --mode=development",
-    "test": "jest"
+    "test": "jest",
+    "snapshot": "jest -u"
   },
   "jest": {
     "verbose": false,

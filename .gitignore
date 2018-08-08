@@ -5,10 +5,11 @@
 
 # testing
 /coverage
+*.snap
 
 # production
-/build
-/dist/main.js*
+dist/main.js
+dist/main.js.map
 
 # misc
 .DS_Store
@@ -20,3 +21,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
