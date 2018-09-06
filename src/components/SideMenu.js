@@ -54,6 +54,7 @@ export class SideMenu extends React.Component {
         <Menu.Menu>
           {recentPosts.map(blog => this.recentMenuItem(blog))}
         </Menu.Menu>
+        <Menu.Item Header><a href='/admin'><Icon name='external alternate' />Admin panel</a><br /><b>Check out the demo mode!</b></Menu.Item>
       </Menu>
     )
   }
