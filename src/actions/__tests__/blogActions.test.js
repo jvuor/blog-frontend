@@ -4,7 +4,7 @@ import thunk from 'redux-thunk'
 import blogService from '../../services/blogs'
 jest.mock('../../services/blogs')
 
-export const mockStore = configureMockStore([thunk])
+const mockStore = configureMockStore([thunk])
 
 describe ('blogActions unit tests', () => {
   const initialState = {}
