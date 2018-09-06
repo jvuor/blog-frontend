@@ -23,29 +23,29 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "deep-freeze": "0.0.1",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^5.1.0",
-    "eslint-plugin-jest": "^21.18.0",
-    "eslint-plugin-react": "^7.10.0",
-    "jest": "^23.4.2",
-    "regenerator-runtime": "^0.12.0",
-    "webpack": "^4.16.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^5.5.0",
+    "eslint-plugin-jest": "^21.22.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.5.0",
+    "regenerator-runtime": "^0.12.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "moment": "^2.22.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-markdown": "^3.4.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-markdown": "^3.6.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-thunk": "^2.3.0",
-    "semantic-ui-react": "^0.82.0"
+    "semantic-ui-react": "^0.82.3"
   }
 }
