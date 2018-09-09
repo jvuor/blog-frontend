@@ -1,15 +1,8 @@
+const setToken = jest.fn(() => Promise.resolve({ test: 'test' }))
 
-const setToken = (newToken) => {
-  console.log('mock token ', newToken)
-}
+const getAll = jest.fn(() => Promise.resolve({ test: 'test' }))
 
-const getAll = () => {
-  return Promise.resolve({ test: 'test' })
-}
-
-const postBlog = () => {
-  return Promise.resolve({ test2: 'test2'})
-}
+const postBlog = jest.fn(() => Promise.resolve({ test: 'test' }))
 
 const deleteBlog = jest.fn()
 

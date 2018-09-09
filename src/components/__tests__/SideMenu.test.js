@@ -2,7 +2,7 @@ import React from 'react'
 import { SideMenu } from '../SideMenu'
 import { MemoryRouter } from 'react-router-dom'
 import { shallow } from 'enzyme'
-import blogTestData from './blogTestData'
+import blogTestData from '../../__tests__/blogTestData'
 
 describe('SideMenu component unit tests', () =>{
   test('fails on empty react state', () =>{

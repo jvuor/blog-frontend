@@ -2,7 +2,7 @@ import React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 import { BlogView } from '../BlogView'
 import { shallow } from 'enzyme'
-import blogTestData from './blogTestData'
+import blogTestData from '../../__tests__/blogTestData'
 
 describe('BlogList component unit tests', () => {
   test('breaks on an empty redux state', () => {

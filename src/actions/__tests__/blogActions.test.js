@@ -22,7 +22,7 @@ describe ('blogActions unit tests', () => {
     await store.dispatch(actionBlogAdd())
     const actions = store.getActions()
     expect(actions.length).toBe(1)
-    expect(actions[0]).toEqual({ type: 'BLOGNEW', data: { test2: 'test2' } })
+    expect(actions[0]).toEqual({ type: 'BLOGNEW', data: { test: 'test' } })
   })
 
   test('actionBlogDelete calls the right function and sends correct action', async () => {
