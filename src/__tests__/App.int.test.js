@@ -18,9 +18,11 @@ describe('integration tests', () => {
     blogService.getAll.mockImplementation(() => Promise.resolve(mockBlogData))
     userService.getAll.mockImplementation(() => Promise.resolve(mockUserData))
 
-    let app = mount(<Provider store={store}>
-      <App />
-    </Provider>)
+    let app = mount(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
 
     // using the timeout to wait for the redux state to propagate
     setTimeout(() => {
@@ -58,6 +60,6 @@ describe('integration tests', () => {
       expect(app.text()).toContain(testPost.content)
 
       done()
-    }, 1000)
+    }, 50)
   })
 })
