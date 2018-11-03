@@ -6,7 +6,7 @@ class Header extends React.Component {
   render () {
     return (
       <UiHeader as='h1' style={headerStyle}>
-        Jussin Blogi
+        jussi.app
       </UiHeader>
     )
   }

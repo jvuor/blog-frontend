@@ -33,7 +33,7 @@ describe('integration tests', () => {
       expect(content).toContain('github.com/jvuor')
 
       // renders header:
-      expect(content).toContain('Jussin Blogi')
+      expect(content).toContain('jussi.app')
 
       // renders footer:
       expect(content).toContain('Blog App by Jussi Vuorinen.')
