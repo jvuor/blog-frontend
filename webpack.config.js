@@ -20,7 +20,7 @@ const config = {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          presets: ['env', 'react'],
+          presets: ['@babel/env', '@babel/react'],
           plugins: [require('babel-plugin-transform-class-properties')]
         }
       }
