@@ -1,0 +1,17 @@
+FROM node:12
+
+SHELL ["/bin/bash", "-c"]
+
+ENV NODE_ENV development
+
+WORKDIR /app
+
+ADD . ./
+
+RUN npm i -g npm@7.7.5
+
+RUN chmod +x docker-entrypoint.sh
+
+EXPOSE 3000
+
+ENTRYPOINT ["docker-entrypoint.sh"]

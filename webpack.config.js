@@ -10,6 +10,7 @@ const config = {
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
+    host: '0.0.0.0',
     port: 3000,
     historyApiFallback: true
   },
